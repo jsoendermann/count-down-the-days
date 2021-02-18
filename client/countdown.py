@@ -11,8 +11,11 @@ def flp_print(msg):
   flp.show()
 
 while True:
-  m, d = itemgetter('month', 'day')(datetime.today())
-  if m == 2 and d == 18:
+  today = datetime.today()
+  month = today.month
+  day = today.day
+
+  if month == 2 and day == 18:
     flp_print("JAN")
   else:
     res = get('https://countdown.j51.eu/countdown')
