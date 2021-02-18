@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-from operator import itemgetter
 from datetime import datetime
 from requests import get
 import fourletterphat as flp
@@ -15,7 +14,9 @@ while True:
   month = today.month
   day = today.day
 
-  if month == 2 and day == 18:
+  if month == 4 and day == 3:
+    flp_print("EMMA")
+  elif month == 11 and day == 2:
     flp_print("JAN")
   else:
     res = get('https://countdown.j51.eu/countdown')
