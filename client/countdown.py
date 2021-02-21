@@ -10,17 +10,20 @@ def flp_print(msg):
   flp.show()
 
 while True:
-  today = datetime.today()
-  month = today.month
-  day = today.day
+  try:
+    today = datetime.today()
+    month = today.month
+    day = today.day
 
-  if month == 4 and day == 3:
-    flp_print("EMMA")
-  elif month == 11 and day == 2:
-    flp_print("JAN")
-  else:
-    res = get('https://countdown.j51.eu/countdown')
-    days = res.text
-    flp_print(days)
+    if month == 4 and day == 3:
+      flp_print("EMMA")
+    elif month == 11 and day == 2:
+      flp_print("JAN")
+    else:
+      res = get('https://countdown.j51.eu/countdown')
+      days = res.text
+      flp_print(days)
+  except:
+    pass
 
   sleep(60)
