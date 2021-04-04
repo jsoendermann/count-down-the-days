@@ -19,6 +19,8 @@ while True:
       flp_print("EMMA")
     elif month == 11 and day == 2:
       flp_print("JAN")
+    elif hour < 8 or hour >= 23:
+      flp.clear()
     else:
       res = get('https://countdown.j51.eu/countdown')
       days = res.text
