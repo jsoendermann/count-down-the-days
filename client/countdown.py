@@ -14,6 +14,7 @@ while True:
     today = datetime.today()
     month = today.month
     day = today.day
+    hour = today.hour
 
     if month == 4 and day == 3:
       print("Emma day!")
